@@ -1,18 +1,25 @@
 import React from 'react';
 
-const CardDriver = () => {
+const CardDriver = (props: {
+    img:string,
+    position:number,
+    name:string,
+    info:string
+}) => {
+
     return(
         <div className="class-CardDriver">
-            <span>01</span>
-            {/* <img src={} alt="IMG" /> */}
+            <span>{props.position}</span>
+            <div>
+                <img src={props.img} alt="IMG" />
+            </div>
             <h4>
-                Drive1:
+                Drive{props.position}:
                 <br/>
-                Andrea Paredes
+                {props.name}
             </h4>
             <p>
-                act that a reader will be
-                distracted
+                {props.info}
             </p>
         </div>
     )

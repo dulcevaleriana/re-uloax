@@ -1,9 +1,11 @@
 *{
     margin: 0 !important;
 }
+
 div[hidden]{
     display: none !important;
 }
+
 body {
     background-color: $color-semi-white;
 }
@@ -70,7 +72,7 @@ body {
 }
 
 .MuiBox-root.css-8atqhb {
-    padding: 25px;
+    padding: $space-size;
     width: 40vw;
     height: calc(100vh - 140px);
 
@@ -95,7 +97,7 @@ body {
 
     form.MuiBox-root.css-1b0ve20 {
         display: grid;
-        gap: 10px;
+        gap: $space-size-small;
         position: relative;
 
         span.class-line {
@@ -103,7 +105,7 @@ body {
             border: 1px solid #1a1a1a;
             position: absolute;
             left: 19px;
-            top: 10px;
+            top: $space-size-small;
         }
 
         > span:nth-child(2),
@@ -116,8 +118,8 @@ body {
                 background-color: $color-black;
                 position: absolute;
                 border-radius: $border-full;
-                top: calc(50% - 10px);
-                left: 10px;
+                top: calc(50% - $space-size-small);
+                left: $space-size-small;
             }
         }
 
@@ -134,14 +136,14 @@ body {
     }
 
     h1 {
-        font-size: 30pt;
+        font-size: $font-size-big;
         font-weight: 900;
     }
 
     button.class-button-black {
         background: $color-black;
         border-radius: $border-full;
-        gap: 10px;
+        gap: $space-size-small;
         align-items: center;
         color: $color-yellow;
         border: 2px solid $color-black;
@@ -159,7 +161,7 @@ body {
 
         .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
             background: $color-black;
-            border-radius: 10px 10px 0 0;
+            border-radius: $space-size-small $space-size-small 0 0;
             color: $color-yellow;
             gap: 5px;
         }
@@ -170,12 +172,12 @@ body {
         background: $color-yellow;
         color: $color-black;
         height: calc(100% - 49px);
-        border-radius: 0 10px 10px 10px;
+        border-radius: 0 $space-size-small $space-size-small $space-size-small;
         align-content: center;
         display: grid;
 
         .MuiBox-root.css-19kzrtu > p.MuiTypography-root.MuiTypography-body1.css-ahj2mt-MuiTypography-root {
-            grid-gap: 10px;
+            grid-gap: $space-size-small;
             display: grid;
         }
 
@@ -191,6 +193,85 @@ body {
     }
     .css-1aquho2-MuiTabs-indicator {
         background-color: $color-black;
+    }
+}
+
+.class-Home > div:nth-child(2){
+    background-color: $color-black;
+    border-top: 100px solid $color-semi-white;
+    margin-top: 20px !important;
+    text-align: center;
+    display: grid;
+    padding: $space-size;
+    grid-template-columns: calc(33% - 12px) calc(33% - 12px) calc(33% - 12px);
+    gap: $space-size;
+
+    h1 {
+        grid-column: 1 / span 3;
+        color: $color-semi-white;
+
+        strong {
+            color: $color-yellow;
+        }
+    }
+
+    .class-CardDriver {
+        background: $color-semi-white;
+        border-radius: $space-size-small;
+        display: grid;
+        justify-items: center;
+        gap: $space-size;
+        padding: $space-size;
+        margin-top: 60px !important;
+        margin-bottom: -60px !important;
+        box-shadow: $shadow-style;
+        padding-bottom: 120px;
+
+        > h4 {
+            font-size: $font-size-big;
+        }
+
+        > span:first-child {
+            background: $color-yellow;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-semi-white;
+            font-size: 20pt;
+            font-weight: bold;
+            border-radius: $border-full;
+            margin-top: -60px !important;
+        }
+
+        > div:nth-child(2){
+            display: inline-block;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: $border-full;
+    
+            img  {
+                width: auto;
+                height: 100%;
+                // margin-left: -50px !important;
+            }
+        }
+    }
+
+}
+
+.class-Home > div:nth-child(3){
+
+    h1 {
+        grid-column: 1 / span 2;
+        color: $color-semi-white;
+
+        strong {
+            color: $color-yellow;
+        }
     }
 }
 
