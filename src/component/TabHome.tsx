@@ -11,6 +11,7 @@ import { Button } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTaxi } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -107,7 +108,19 @@ const TabHome = () => {
           <img src={BG_TABHOME_2} alt="IMG" />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          Item Three
+          <h1>
+            If you prefer... <br/>
+            Call Classics Service
+          </h1>
+          <p>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of
+          </p>
+          <strong>
+            (+71) 1234567890
+          </strong>
+          <Button variant="contained" className="class-button-black">
+              <FontAwesomeIcon icon={faPhone} /> Call Classics Service
+          </Button>
           <img src={BG_TABHOME_3} alt="IMG" />
         </TabPanel>
       </Box>
