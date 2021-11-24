@@ -20,16 +20,16 @@ const Menu = () => {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <a href="#">Our Drivers</a>
+                    <a href="#lolo">Our Drivers</a>
                 </li>
                 <li>
-                    <a href="#">Ride With Us</a>
+                    <a href="#lolo">Ride With Us</a>
                 </li>
                 <li>
-                    <a href="#">App</a>
+                    <a href="#lolo">App</a>
                 </li>
                 <li>
-                    <a href="#">Contact Us</a>
+                    <a href="#lolo">Contact Us</a>
                 </li>
             </ul>
         

@@ -47,18 +47,63 @@ body {
         }
 
         a:first-child > button {
-            background-color: #f8ca11;
+            background-color: $color-yellow;
             border-radius: 1000px 0 0 1000px;
-            color: #1a1a1a;
-            border: 2px solid #f8ca11;
+            color: $color-black;
+            border: 2px solid $color-yellow;
         }
 
         a:last-child > button {
-            background-color: #1a1a1a;
+            background-color: $color-black;
             border-radius: 0 1000px 1000px 0;
-            color: #f8ca11;
-            border: 2px solid #f8ca11;
+            color: $color-yellow;
+            border: 2px solid $color-yellow;
         }
 
     }
 }
+
+.MuiBox-root.css-8atqhb {
+    padding: 25px;
+    width: 40vw;
+    height: calc(100vh - 140px);
+
+    .css-1gsv261 {
+        border: none;
+
+        .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+            color: $color-black;
+            background: $color-yellow;
+            border: none !important;
+        }
+
+        .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+            background: $color-black;
+            border-radius: 10px 10px 0 0;
+            color: $color-yellow;
+            gap: 5px;
+        }
+
+    }
+
+    .class-TabHome {
+        background: $color-yellow;
+        color: $color-black;
+        height: calc(100% - 49px);
+        border-radius: 0 10px 10px 10px;
+
+        img {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+    .css-1aquho2-MuiTabs-indicator {
+        background-color: $color-black;
+    }
+}
+

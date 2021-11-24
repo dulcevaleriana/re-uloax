@@ -3,6 +3,12 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import BG_TABHOME_1 from '../assets/img/BG_TABHOME_1.png';
+import BG_TABHOME_2 from '../assets/img/BG_TABHOME_2.png';
+import BG_TABHOME_3 from '../assets/img/BG_TABHOME_3.png';
+import { Button } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -16,6 +22,7 @@ interface TabPanelProps {
     return (
       <div
         role="tabpanel"
+        className="class-TabHome"
         hidden={value !== index}
         id={`simple-tabpanel-${index}`}
         aria-labelledby={`simple-tab-${index}`}
@@ -54,13 +61,25 @@ const TabHome = () => {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          Item One
+          <h2>
+            Drive with us <br/>
+            Be your own boss
+          </h2>
+          <p>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c
+          </p>
+          <Button variant="contained">
+              <FontAwesomeIcon icon={faUserPlus} /> Become a UloaxDriver
+          </Button>
+          <img src={BG_TABHOME_1} alt="IMG" />
         </TabPanel>
         <TabPanel value={value} index={1}>
           Item Two
+          <img src={BG_TABHOME_2} alt="IMG" />
         </TabPanel>
         <TabPanel value={value} index={2}>
           Item Three
+          <img src={BG_TABHOME_3} alt="IMG" />
         </TabPanel>
       </Box>
     );
