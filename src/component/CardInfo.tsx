@@ -1,19 +1,20 @@
 import React  from "react";
 import Button from '@mui/material/Button';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const CardInfo = () => {
+const CardInfo = (props:{
+    img:string,
+    title:string,
+    info:string,
+    icon:any,
+    buttonName:string
+}) => {
     return(
         <div className="class-CardInfo">
-            {/* <img src={} alt="IMG" /> */}
-            <h4>Uloax for Every Pocket</h4>
-            <p>
-                It is a long established fact that a reader will be distracted 
-                by the readable content of a page when looking at its layout. 
-                The point of using Lorem Ipsum is that it has a more-or-less normal 
-                distribution of letters, as It is a long established fact that a reader 
-                will be distracted by the readable c
-            </p>
-            <Button variant="contained">Contained</Button>
+            <img src={props.img} alt="IMG" />
+            <h4>{props.title}</h4>
+            <p>{props.info}</p>
+            <Button variant="contained"><FontAwesomeIcon icon={props.icon} /> {props.buttonName}</Button>
         </div>
     )
 }
