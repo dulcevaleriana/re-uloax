@@ -3,12 +3,14 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Input from '@mui/material/Input';
 import BG_TABHOME_1 from '../assets/img/BG_TABHOME_1.png';
 import BG_TABHOME_2 from '../assets/img/BG_TABHOME_2.png';
 import BG_TABHOME_3 from '../assets/img/BG_TABHOME_3.png';
 import { Button } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faTaxi } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -55,26 +57,53 @@ const TabHome = () => {
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab label="Item One" {...a11yProps(0)} />
-            <Tab label="Item Two" {...a11yProps(1)} />
-            <Tab label="Item Three" {...a11yProps(2)} />
+            <Tab label="Drive with us" {...a11yProps(0)} />
+            <Tab label="Take a Trip" {...a11yProps(1)} />
+            <Tab label="Call Classics Service" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <h2>
+          <h1>
             Drive with us <br/>
             Be your own boss
-          </h2>
+          </h1>
           <p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c
           </p>
-          <Button variant="contained">
-              <FontAwesomeIcon icon={faUserPlus} /> Become a UloaxDriver
+          <Button variant="contained" className="class-button-black">
+              <FontAwesomeIcon icon={faTaxi} /> Become a UloaxDriver
           </Button>
           <img src={BG_TABHOME_1} alt="IMG" />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item Two
+          <h1>
+            Take a Trip <br />
+            You will save with us
+          </h1>
+          <p>
+            It is a long established fact that a reader will be distracted by the 
+          </p>
+          <Box
+            component="form"
+            sx={{
+              '& > :not(style)': { m: 1 },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <span className="class-line"/>
+            <span>
+              <span className="class-cicle"/>
+              <Input placeholder="Where are you?" />
+            </span>
+            <span>
+              <span className="class-cicle"/>
+              <Input placeholder="Where do you want to go?" />
+            </span>
+            <Button variant="contained" className="class-button-black">
+              <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Take a Trip Now!
+            </Button>
+          </Box>
           <img src={BG_TABHOME_2} alt="IMG" />
         </TabPanel>
         <TabPanel value={value} index={2}>

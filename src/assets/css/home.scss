@@ -1,3 +1,9 @@
+*{
+    margin: 0 !important;
+}
+div[hidden]{
+    display: none !important;
+}
 body {
     background-color: $color-semi-white;
 }
@@ -48,14 +54,14 @@ body {
 
         a:first-child > button {
             background-color: $color-yellow;
-            border-radius: 1000px 0 0 1000px;
+            border-radius: $border-full 0 0 $border-full;
             color: $color-black;
             border: 2px solid $color-yellow;
         }
 
         a:last-child > button {
             background-color: $color-black;
-            border-radius: 0 1000px 1000px 0;
+            border-radius: 0 $border-full $border-full 0;
             color: $color-yellow;
             border: 2px solid $color-yellow;
         }
@@ -67,6 +73,80 @@ body {
     padding: 25px;
     width: 40vw;
     height: calc(100vh - 140px);
+
+    .css-a88p61-MuiInputBase-root-MuiInput-root:before {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+        border-radius: $border-full !important;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    .css-a88p61-MuiInputBase-root-MuiInput-root:after{
+        border-radius: $border-full !important;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    .class-icono-rotate-and-flip{
+        transform: rotate(-90deg) scaleY(-1);
+    }
+
+    form.MuiBox-root.css-1b0ve20 {
+        display: grid;
+        gap: 10px;
+        position: relative;
+
+        span.class-line {
+            height: 40%;
+            border: 1px solid #1a1a1a;
+            position: absolute;
+            left: 19px;
+            top: 10px;
+        }
+
+        > span:nth-child(2),
+        > span:nth-child(3){
+            position: relative;
+
+            span.class-cicle {
+                width: 20px;
+                height: 20px;
+                background-color: $color-black;
+                position: absolute;
+                border-radius: $border-full;
+                top: calc(50% - 10px);
+                left: 10px;
+            }
+        }
+
+        .MuiInput-root.MuiInput-underline.MuiInputBase-root.MuiInputBase-colorPrimary.css-a88p61-MuiInputBase-root-MuiInput-root {
+            width: 80%;
+
+            input.MuiInput-input.MuiInputBase-input.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+                border-radius: $border-full;
+                border: 2px solid $color-black;
+                padding-left: 40px;
+            }
+
+        }
+    }
+
+    h1 {
+        font-size: 30pt;
+        font-weight: 900;
+    }
+
+    button.class-button-black {
+        background: $color-black;
+        border-radius: $border-full;
+        gap: 10px;
+        align-items: center;
+        color: $color-yellow;
+        border: 2px solid $color-black;
+        max-width: 50%;
+    }
 
     .css-1gsv261 {
         border: none;
@@ -91,6 +171,13 @@ body {
         color: $color-black;
         height: calc(100% - 49px);
         border-radius: 0 10px 10px 10px;
+        align-content: center;
+        display: grid;
+
+        .MuiBox-root.css-19kzrtu > p.MuiTypography-root.MuiTypography-body1.css-ahj2mt-MuiTypography-root {
+            grid-gap: 10px;
+            display: grid;
+        }
 
         img {
             position: absolute;
