@@ -323,3 +323,39 @@ body {
     }
 }
 
+.class-AppDownloadInfo {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    position: relative;
+    height: 50vh;
+    max-height: 1318px;
+    padding: 50vh 25px;
+    align-items: center;
+    justify-content: start;
+
+
+    h1 {
+        grid-column: 1 / span 2;
+        color: $color-black;
+        font-size: 40pt;
+
+        strong {
+            color: $color-yellow;
+        }
+    }
+
+    > img:last-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    > button > img {
+        width: 100%;
+    }
+}
+
