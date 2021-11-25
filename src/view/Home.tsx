@@ -40,28 +40,32 @@ const CardInfoArray = [
         title:"Uloax for Every Pocket",
         info:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c",
         icon:faThumbsUp,
-        buttonName:"Take a Trip Now!"
+        buttonName:"Take a Trip Now!",
+        flip:false
     },
     {
         img: DRIVER_7,
         title:"Secure and Safer Rides",
         info:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c",
         icon:faThumbsUp,
-        buttonName:"Take a Trip Now!"
+        buttonName:"Take a Trip Now!",
+        flip:true
     },
     {
         img: DRIVER_5,
         title:"Uloax for Every Pocket",
         info:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c",
         icon:faThumbsUp,
-        buttonName:"Take a Trip Now!"
+        buttonName:"Take a Trip Now!",
+        flip:false
     },
     {
         img: DRIVER_6,
         title:"No 1 in the industry",
         info:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c",
         icon:faThumbsUp,
-        buttonName:"Take a Trip Now!"
+        buttonName:"Take a Trip Now!",
+        flip:true
     }
 ]
 
@@ -91,6 +95,7 @@ const Home = () => {
                         info={item.info}
                         icon={item.icon}
                         buttonName={item.buttonName}
+                        flip={item.flip}
                     />
                 ))}
             </div>

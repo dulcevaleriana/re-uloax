@@ -198,8 +198,7 @@ body {
 
 .class-Home > div:nth-child(2){
     background-color: $color-black;
-    border-top: 100px solid $color-semi-white;
-    margin-top: 20px !important;
+    margin-top: 35vh !important;
     text-align: center;
     display: grid;
     padding: $space-size;
@@ -210,6 +209,7 @@ body {
         grid-column: 1 / span 3;
         color: $color-semi-white;
         font-size: $font-size-big;
+        margin-top: 15vh !important;
 
         strong {
             color: $color-yellow;
@@ -265,14 +265,60 @@ body {
 }
 
 .class-Home > div:nth-child(3){
+    margin-top: 35vh !important;
 
     h1 {
         grid-column: 1 / span 2;
-        color: $color-semi-white;
+        color: $color-black;
         font-size: $font-size-big;
+        text-align: center;
 
         strong {
             color: $color-yellow;
+        }
+    }
+
+    .class-CardInfo.class-flip {
+        text-align: right;
+        grid-template-columns: calc(50% - 12.5px) calc(50% - 12.5px);
+        margin-left: 25px !important;
+
+        img {
+            grid-column: 2;
+        }
+
+        button.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.css-sghohy-MuiButtonBase-root-MuiButton-root {
+            margin-left: 50% !important;
+        }
+    }
+
+    .class-CardInfo {
+        display: grid;
+        grid-template-columns: calc(50% - 12.5px) calc(50% - 12.5px - 25px);
+        grid-gap: $space-size;
+        gap: $space-size;
+        margin: 25vh 0 !important;
+
+        img {
+            width: 100%;
+            grid-row: 1 / span 4;
+        }
+
+        h4 {
+            font-size: $font-size-big;
+            margin-top: 15vh !important;
+            font-weight: 400;
+        }
+
+        button.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.css-sghohy-MuiButtonBase-root-MuiButton-root {
+            background: $color-yellow;
+            border-radius: 1000px;
+            grid-gap: $space-size-small;
+            gap: $space-size-small;
+            align-items: center;
+            color: $color-black;
+            border: 2px solid $color-yellow;
+            max-width: 50%;
         }
     }
 }

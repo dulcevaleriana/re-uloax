@@ -7,10 +7,11 @@ const CardInfo = (props:{
     title:string,
     info:string,
     icon:any,
-    buttonName:string
+    buttonName:string,
+    flip:boolean
 }) => {
     return(
-        <div className="class-CardInfo">
+        <div className={props.flip === true ? "class-CardInfo class-flip" : "class-CardInfo"}>
             <img src={props.img} alt="IMG" />
             <h4>{props.title}</h4>
             <p>{props.info}</p>
