@@ -15,7 +15,9 @@ function App() {
         <Route path="/SingIp" element={<SingIn />} />
         <Route path="/SingUp" element={<SingUp />} />
       </Routes>
-      <Footer />
+      <span id="contactUs">
+        <Footer />
+      </span>
     </div>
   );
 }
