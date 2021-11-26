@@ -11,7 +11,13 @@ import Icon_instagram from '../assets/img/icon/instagram-brands.svg';
 import Icon_linkedin from '../assets/img/icon/linkedin-brands.svg';
 import Icon_youtube from '../assets/img/icon/youtube-brands.svg';
 
-const Footer = () => {
+const Footer = (props: {
+    function0: () => void,
+    function1: () => void,
+    function2: () => void,
+    function3: () => void,
+    function4: () => void,
+}) => {
     return(
         <div className="class-Footer" id="lolo">
             <img src={IMG_LOGO} alt="IMG_LOGO" />
@@ -24,20 +30,20 @@ const Footer = () => {
             <div>
                 <h1>Links</h1>
                 <ul>
-                <li>
-                    <a href="#lolo">Home</a>
+                <li onClick={() => props.function0()}>
+                    <a href="#Home">Home</a>
                 </li>
-                <li>
-                    <a href="#lolo">Our Drivers</a>
+                <li onClick={() => props.function1()}>
+                    <a href="#ourTaxiDrivers">Our Drivers</a>
                 </li>
-                <li>
-                    <a href="#lolo">Ride With Us</a>
+                <li onClick={() => props.function2()}>
+                    <a href="#rideWithUs">Ride With Us</a>
                 </li>
-                <li>
-                    <a href="#lolo">App</a>
+                <li onClick={() => props.function3()}>
+                    <a href="#app">App</a>
                 </li>
-                <li>
-                    <a href="#lolo">Contact Us</a>
+                <li onClick={() => props.function4()}>
+                    <a href="#contactUs">Contact Us</a>
                 </li>
             </ul>
             </div>

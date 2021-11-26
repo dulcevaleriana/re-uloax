@@ -10,6 +10,11 @@ body {
     background-color: $color-semi-white;
 }
 
+a:hover,
+a:focus{
+    color: $color-yellow !important;
+}
+
 .class-Menu {
     background-color: $color-black;
     display: grid;

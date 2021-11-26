@@ -1,16 +1,16 @@
 import React  from "react";
 import {Helmet} from "react-helmet";
 
-const SingUp = () =>{
+const SignUp = () =>{
     return(
-        <div className="class-SingUp">
+        <div className="class-SignUp">
         <Helmet>
             <meta charSet="utf-8" />
             <title>Sing Up || Uloax</title>
         </Helmet>
-        SingUp
+        SignUp
         </div>
     )
 }
 
-export default SingUp;
+export default SignUp;
