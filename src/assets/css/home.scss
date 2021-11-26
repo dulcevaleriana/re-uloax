@@ -312,7 +312,7 @@ body {
 
         button.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.css-sghohy-MuiButtonBase-root-MuiButton-root {
             background: $color-yellow;
-            border-radius: 1000px;
+            border-radius: $border-full;
             grid-gap: $space-size-small;
             gap: $space-size-small;
             align-items: center;
@@ -392,11 +392,66 @@ body {
             a {
                 text-decoration: none;
                 color: $color-semi-white;
-                font-weight: bold;
                 display: flex;
                 align-items: center;
                 gap: $space-size-small;
             }
         }
+    }
+
+    >div:last-child span {
+        position: relative;
+
+        .class-cicle {
+            width: 20px;
+            height: 20px;
+            background-color: $color-yellow;
+            position: absolute;
+            border-radius: $border-full;
+            top: calc(50% - $space-size-small);
+            left: $space-size-small;
+        }
+
+        .MuiInput-root.MuiInput-underline.MuiInputBase-root.MuiInputBase-colorPrimary.css-a88p61-MuiInputBase-root-MuiInput-root {
+            width: 100%;
+        }
+
+        .css-a88p61-MuiInputBase-root-MuiInput-root:before {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+            border-radius: $border-full !important;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        input.MuiInput-input.MuiInputBase-input.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+            border-radius: $border-full;
+            border: 2px solid $color-yellow;
+            padding-left: 40px;
+            color: $color-yellow;
+        }
+
+        .css-a88p61-MuiInputBase-root-MuiInput-root:after {
+            border-radius: $border-full !important;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    button {
+        margin-top: $space-size-small !important;
+        background-color: $color-yellow;
+        border-radius: $border-full;
+        grid-gap: $space-size-small;
+        grid-gap: $space-size-small;
+        gap: $space-size-small;
+        align-items: center;
+        color: $color-black;
+        border: 2px solid $color-yellow;
+        max-width: 50%;
+    }
+    button:hover {
+        background-color: $color-yellow;
     }
 }

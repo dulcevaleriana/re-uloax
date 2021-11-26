@@ -6,6 +6,10 @@ import Box from "@mui/material/Box";
 import Input from "@mui/material/Input";
 import Button from "@mui/material/Button";
 import Icon_fb from '../assets/img/icon/facebook-brands.svg';
+import Icon_twitter from '../assets/img/icon/twitter-brands.svg';
+import Icon_instagram from '../assets/img/icon/instagram-brands.svg';
+import Icon_linkedin from '../assets/img/icon/linkedin-brands.svg';
+import Icon_youtube from '../assets/img/icon/youtube-brands.svg';
 
 const Footer = () => {
     return(
@@ -44,16 +48,16 @@ const Footer = () => {
                         <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
                     </li>
                     <li>
-                        <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
+                        <a href="#lolo"><img src={Icon_twitter} alt="ICON"/> Twitter</a>
                     </li>
                     <li>
-                        <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
+                        <a href="#lolo"><img src={Icon_linkedin} alt="ICON"/> LinkedIn</a>
                     </li>
                     <li>
-                        <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
+                        <a href="#lolo"><img src={Icon_youtube} alt="ICON"/> Youtube</a>
                     </li>
                     <li>
-                        <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
+                        <a href="#lolo"><img src={Icon_instagram} alt="ICON"/> Instagram</a>
                     </li>
                 </ul>
             </div>
@@ -71,7 +75,7 @@ const Footer = () => {
                         <span className="class-cicle"/>
                         <Input placeholder="Enter your email" />
                     </span>
-                    <Button variant="contained" className="class-button-black">
+                    <Button variant="contained">
                         <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Subscribe
                     </Button>
                 </Box>
