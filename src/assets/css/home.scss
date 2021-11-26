@@ -359,3 +359,44 @@ body {
     }
 }
 
+.class-Footer {
+    background: $color-black;
+    padding: $space-size;
+    margin-top: -63px !important;
+    display: grid;
+    grid-template-columns: calc(25% - $space-size) calc(25% - $space-size) calc(25% - $space-size) 25%;
+    grid-gap: $space-size;
+    gap: $space-size;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    color: $color-semi-white;
+
+    h1 {
+        margin-bottom: $space-size !important;
+    }
+
+    > img:first-child  {
+        grid-column: 1 / span 4;
+        max-width: 120px;
+    }
+
+    ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: $space-size-small;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: $color-semi-white;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                gap: $space-size-small;
+            }
+        }
+    }
+}

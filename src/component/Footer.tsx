@@ -1,11 +1,11 @@
 import React from "react";
 import IMG_LOGO from '../assets/img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import Box from "@mui/material/Box";
 import Input from "@mui/material/Input";
 import Button from "@mui/material/Button";
-import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import Icon_fb from '../assets/img/icon/facebook-brands.svg';
 
 const Footer = () => {
     return(
@@ -41,7 +41,19 @@ const Footer = () => {
                 <h1>Follow Us</h1>
                 <ul>
                     <li>
-                        {/* <FontAwesomeIcon icon={faFacebook} /> Call Classics Service */}
+                        <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#lolo"><img src={Icon_fb} alt="ICON"/> Facebook</a>
                     </li>
                 </ul>
             </div>
