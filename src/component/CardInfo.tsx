@@ -13,7 +13,7 @@ const CardInfo = (props:{
     return(
         <div className={props.flip === true ? "class-CardInfo class-flip" : "class-CardInfo"}>
             <img src={props.img} alt="IMG" />
-            <h4>{props.title}</h4>
+            <h3>{props.title}</h3>
             <p>{props.info}</p>
             <Button variant="contained"><FontAwesomeIcon icon={props.icon} /> {props.buttonName}</Button>
         </div>

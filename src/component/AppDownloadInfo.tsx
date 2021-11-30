@@ -7,10 +7,10 @@ import IOS from '../assets/img/IOS.png';
 const AppDownloadInfo = () => {
     return(
         <div className="class-AppDownloadInfo">
-            <h1>
+            <h2>
                 Downloads <br/>
                 <strong>Our App Today</strong>
-            </h1>
+            </h2>
             <Button variant="text">
                 <img src={Google_Play} alt="IMG" />
             </Button>
