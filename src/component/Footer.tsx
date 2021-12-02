@@ -81,7 +81,7 @@ const Footer = (props: {
                     <span>
                         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                             <FontAwesomeIcon icon={faEnvelope} className=""/> 
-                            <TextField label="Enter your email" variant="standard" />
+                            <TextField label="Enter your email" variant="standard" id="Enter-your-email"/>
                         </Box>
                     </span>
                     <Button variant="contained"><FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Subscribe</Button>

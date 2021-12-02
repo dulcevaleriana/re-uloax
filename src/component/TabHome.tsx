@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
@@ -49,7 +49,8 @@ interface TabPanelProps {
   }
 
 const TabHome = () => {
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
+    const [whereAreYou, setWhereAreYou] = useState("");
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
       setValue(newValue);
@@ -97,13 +98,13 @@ const TabHome = () => {
             <span>
               <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                 <FontAwesomeIcon icon={faLocationDot} className=""/> 
-                <TextField label="Where are you?" variant="standard" />
+                <TextField onChange={(a)=>setWhereAreYou(a.target.value)} label="Where are you?" variant="standard" id="Where-are-you"/>
               </Box>
             </span>
             <span>
               <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                 <FontAwesomeIcon icon={faLocationDot} className=""/> 
-                <TextField label="Where do you want to go?" variant="standard" />
+                <TextField label="Where do you want to go?" variant="standard" id="Where-do-you-want-to-go"/>
               </Box>
             </span>
             <Button variant="contained" className="class-button-black">
