@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import IMG_LOGO from '../assets/img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
@@ -19,6 +19,15 @@ const Footer = (props: {
     function3: () => void,
     function4: () => void,
 }) => {
+    const [emailNewsletter, setEmailNewsletter] = useState("");
+    const [validForm, setValidForm] = useState(false);
+
+    const validFormChange = () =>{
+        alert("Thanks for be our new Newsletter :,)");
+        setValidForm(false);
+        setEmailNewsletter(" ");
+    }
+
     return(
         <div className="class-Footer" id="lolo">
             <img src={IMG_LOGO} alt="IMG_LOGO" />
@@ -81,10 +90,27 @@ const Footer = (props: {
                     <span>
                         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                             <FontAwesomeIcon icon={faEnvelope} className=""/> 
-                            <TextField label="Enter your email" variant="standard" id="Enter-your-email"/>
+                            <TextField 
+                                error={(validForm && emailNewsletter === "") ? true : false}
+                                onChange={(a)=>setEmailNewsletter(a.target.value)} 
+                                value={emailNewsletter !== "" ? emailNewsletter : ""}
+                                label="Enter your email" 
+                                variant="standard" 
+                                id="Enter-your-email"
+                                helperText={(validForm && emailNewsletter === "") ? "You have to tell us your email" : false}
+                            />
                         </Box>
                     </span>
-                    <Button variant="contained"><FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Subscribe</Button>
+                    <Button 
+                        onClick={
+                            (validForm && emailNewsletter !== "") ? 
+                            (validFormChange) 
+                            : 
+                            (()=>setValidForm(true))
+                        } 
+                        variant="contained">
+                            <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Subscribe
+                    </Button>
                 </Box>
             </div>
         </div>

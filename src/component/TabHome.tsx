@@ -50,12 +50,19 @@ interface TabPanelProps {
 
 const TabHome = () => {
     const [value, setValue] = useState(0);
-    const [whereAreYou, setWhereAreYou] = useState(" ");
-    const [whereDoYouWantToGo, setWhereDoYouWantToGo] = useState(" ");
+    const [whereAreYou, setWhereAreYou] = useState("");
+    const [whereDoYouWantToGo, setWhereDoYouWantToGo] = useState("");
     const [validForm, setValidForm] = useState(false);
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
       setValue(newValue);
     };
+
+    const validFormChange = () =>{
+      alert("Get it!, you'are in " + whereAreYou + " and, you wanna go to " + whereDoYouWantToGo + " in 5 minutes one of us Taxi Driver will comming for you, wait for us :)");
+      setValidForm(false);
+      setWhereDoYouWantToGo(" ");
+      setWhereAreYou(" ");
+    }
   
     return (
       <Box sx={{ width: '100%' }}>
@@ -100,14 +107,13 @@ const TabHome = () => {
               <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                 <FontAwesomeIcon icon={faLocationDot} className=""/> 
                 <TextField 
-                  error={(validForm && whereAreYou === " ") ? true : false}
+                  error={(validForm && whereAreYou === "") ? true : false}
                   onChange={(a)=>setWhereAreYou(a.target.value)} 
-                  // CHECK HERE
-                  value={whereAreYou === " " ? null : whereAreYou}
+                  value={whereAreYou !== "" ? whereAreYou : ""}
                   label="Where are you?" 
                   variant="standard" 
                   id="Where-are-you"
-                  helperText={(validForm && whereAreYou === " ") ? "You have to tell us where you are" : false}
+                  helperText={(validForm && whereAreYou === "") ? "You have to tell us where you are" : false}
                 />
               </Box>
             </span>
@@ -115,22 +121,20 @@ const TabHome = () => {
               <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                 <FontAwesomeIcon icon={faLocationDot} className=""/> 
                 <TextField 
-                  error={(validForm && whereDoYouWantToGo === " ") ? true : false}
+                  error={(validForm && whereDoYouWantToGo === "") ? true : false}
                   onChange={(b)=>setWhereDoYouWantToGo(b.target.value)}
-                  // CHECK HERE
-                  value={whereDoYouWantToGo === " " ? null : whereDoYouWantToGo}
+                  value={whereDoYouWantToGo !== "" ? whereDoYouWantToGo : ""}
                   label="Where do you want to go?" 
                   variant="standard" 
                   id="Where-do-you-want-to-go"
-                  helperText={(validForm && whereDoYouWantToGo === " ") ? "You have to tell us where you want to go" : false}
+                  helperText={(validForm && whereDoYouWantToGo === "") ? "You have to tell us where you want to go" : false}
                 />
               </Box>
             </span>
             <Button 
               onClick={
-                // CHECK HERE
-                (validForm && whereDoYouWantToGo !== " " && whereAreYou !== " " && whereDoYouWantToGo !== null && whereAreYou !== null) ? 
-                (()=>{alert("Get it!, you'are in " + whereAreYou + " and, you wanna go to " + whereDoYouWantToGo + " in 5 minutes one of us Taxi Driver will comming for you, wait for us :)");setValidForm(false);setWhereDoYouWantToGo(" ");setWhereAreYou(" ")}) 
+                (validForm && whereDoYouWantToGo !== "" && whereAreYou !== "") ? 
+                (validFormChange) 
                 : 
                 (()=>setValidForm(true))
               } 
