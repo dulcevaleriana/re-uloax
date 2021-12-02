@@ -102,6 +102,7 @@ const TabHome = () => {
                 <TextField 
                   error={(validForm && whereAreYou === " ") ? true : false}
                   onChange={(a)=>setWhereAreYou(a.target.value)} 
+                  value={whereAreYou}
                   label="Where are you?" 
                   variant="standard" 
                   id="Where-are-you"
@@ -115,6 +116,7 @@ const TabHome = () => {
                 <TextField 
                   error={(validForm && whereDoYouWantToGo === " ") ? true : false}
                   onChange={(b)=>setWhereDoYouWantToGo(b.target.value)}
+                  value={whereDoYouWantToGo}
                   label="Where do you want to go?" 
                   variant="standard" 
                   id="Where-do-you-want-to-go"
@@ -125,7 +127,7 @@ const TabHome = () => {
             <Button 
               onClick={
                 (validForm && whereDoYouWantToGo !== " " && whereAreYou !== " ") ? 
-                (()=>{setValidForm(false);setWhereDoYouWantToGo(" ");setWhereAreYou(" ")}) 
+                (()=>{alert("Get it!, you'are in " + whereAreYou + " and, you wanna go to " + whereDoYouWantToGo + " in 5 minutes one of us Taxi Driver will comming for you, wait for us :)");setValidForm(false);setWhereDoYouWantToGo(" ");setWhereAreYou(" ")}) 
                 : 
                 (()=>setValidForm(true))
               } 
