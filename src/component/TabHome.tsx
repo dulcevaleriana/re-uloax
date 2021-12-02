@@ -50,8 +50,9 @@ interface TabPanelProps {
 
 const TabHome = () => {
     const [value, setValue] = useState(0);
-    const [whereAreYou, setWhereAreYou] = useState("");
-
+    const [whereAreYou, setWhereAreYou] = useState(" ");
+    const [whereDoYouWantToGo, setWhereDoYouWantToGo] = useState(" ");
+    const [validForm, setValidForm] = useState(false);
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
       setValue(newValue);
     };
@@ -98,16 +99,39 @@ const TabHome = () => {
             <span>
               <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                 <FontAwesomeIcon icon={faLocationDot} className=""/> 
-                <TextField onChange={(a)=>setWhereAreYou(a.target.value)} label="Where are you?" variant="standard" id="Where-are-you"/>
+                <TextField 
+                  error={(validForm && whereAreYou === " ") ? true : false}
+                  onChange={(a)=>setWhereAreYou(a.target.value)} 
+                  label="Where are you?" 
+                  variant="standard" 
+                  id="Where-are-you"
+                  helperText={(validForm && whereAreYou === " ") ? "You have to tell us where you are" : false}
+                />
               </Box>
             </span>
             <span>
               <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                 <FontAwesomeIcon icon={faLocationDot} className=""/> 
-                <TextField label="Where do you want to go?" variant="standard" id="Where-do-you-want-to-go"/>
+                <TextField 
+                  error={(validForm && whereDoYouWantToGo === " ") ? true : false}
+                  onChange={(b)=>setWhereDoYouWantToGo(b.target.value)}
+                  label="Where do you want to go?" 
+                  variant="standard" 
+                  id="Where-do-you-want-to-go"
+                  helperText={(validForm && whereDoYouWantToGo === " ") ? "You have to tell us where you want to go" : false}
+                />
               </Box>
             </span>
-            <Button variant="contained" className="class-button-black">
+            <Button 
+              onClick={
+                (validForm && whereDoYouWantToGo !== " " && whereAreYou !== " ") ? 
+                (()=>{setValidForm(false);setWhereDoYouWantToGo(" ");setWhereAreYou(" ")}) 
+                : 
+                (()=>setValidForm(true))
+              } 
+              variant="contained" 
+              className="class-button-black"
+            >
               <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Take a Trip Now!
             </Button>
           </Box>
