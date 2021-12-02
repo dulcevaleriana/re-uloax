@@ -45,10 +45,10 @@
     .MuiBox-root.css-8atqhb {
         padding: 25px;
         padding-top: 80px;
-        width: 80vw;
-        height: calc(100vh - 300px);
+        width: calc(100vw - 55px);
         grid-template-columns: 210px auto;
         display: grid;
+        height: 100vh;
 
         .MuiTabs-flexContainer.css-heg063-MuiTabs-flexContainer {
             display: flex;
@@ -72,7 +72,7 @@
         margin-top: 0vh !important;
     }
     .class-AppDownloadInfo {
-        height: 60vh;
+        height: 350px;
         padding: 25px;
     }
     .class-AppDownloadInfo button {
@@ -80,15 +80,17 @@
     }
     .MuiBox-root.css-8atqhb .class-TabHome img {
         position: fixed;
-        width: 150vh;
+        width: 100%;
     }
 }
 
 /*iPad, Nexus 9 – 1*/
 @media only screen and (max-width: 768px) and (max-height: 1024px) {
     .MuiBox-root.css-8atqhb {
-        width: calc(100vw - 50px);
+        width: 100%;
         height: auto;
+        padding-left: 0;
+        padding-right: 0;
     }
     .MuiBox-root.css-8atqhb .class-TabHome {
         height: 100%;
@@ -219,10 +221,6 @@
     }
 }
 
-@media only screen and (max-width: 540px) and (max-height: 720px){
-
-}
-
 /*Mini Smartphone*/
 @media only screen and (max-width: 500px) {
     .class-Home > div:nth-child(2) .class-CardDriver {
@@ -264,11 +262,56 @@
 }
 
 @media only screen and (max-width: 360px) {
-
+    .MuiBox-root.css-8atqhb .MuiTabs-flexContainer.css-heg063-MuiTabs-flexContainer {
+        width: 100vw;
+    }
+    .MuiBox-root.css-8atqhb .MuiTabs-flexContainer.css-heg063-MuiTabs-flexContainer .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+        white-space: nowrap;
+        width: 33%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .class-Home > div:nth-child(2) .class-CardDriver > span:first-child {
+        left: 66px;
+        width: 50px;
+        height: 50px;
+        font-size: 15pt;
+    }
+    .class-Home > div:nth-child(3) h2 strong,
+    .class-Home > div:nth-child(2) h2 strong {
+        display: inline-block;
+    }
+    .class-Home > div:nth-child(3) .class-CardInfo button.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.css-sghohy-MuiButtonBase-root-MuiButton-root {
+        max-width: 100%;
+    }
+    .class-AppDownloadInfo {
+        height: 300px;
+    }
+    .class-Footer > div:last-child,
+    .class-Footer > div:nth-child(2) {
+        grid-column: 1 / span 2;
+    }
+    .class-Menu {
+        display: grid;
+        grid-template-columns: 15px 132px calc(100% - 400px) 132px;
+    }
+    .class-Home > div:nth-child(2) .class-CardDriver {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 @media only screen and (max-width: 321px){
-
+    .class-Home > div:nth-child(3) {
+        padding-top: 100px !important;
+    }
+    .class-AppDownloadInfo h2 strong {
+        white-space: nowrap;
+        letter-spacing: -2px;
+    }
+    .class-AppDownloadInfo {
+        height: 280px;
+    }
 }
 
 /*safari style MAC IPHONE IOS*/
