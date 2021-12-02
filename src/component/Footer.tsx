@@ -2,14 +2,15 @@ import React from "react";
 import IMG_LOGO from '../assets/img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Box from "@mui/material/Box";
-import Input from "@mui/material/Input";
 import Button from '@mui/material/Button';
 import Icon_fb from '../assets/img/icon/facebook-brands.svg';
 import Icon_twitter from '../assets/img/icon/twitter-brands.svg';
 import Icon_instagram from '../assets/img/icon/instagram-brands.svg';
 import Icon_linkedin from '../assets/img/icon/linkedin-brands.svg';
 import Icon_youtube from '../assets/img/icon/youtube-brands.svg';
+import { TextField } from "@mui/material";
 
 const Footer = (props: {
     function0: () => void,
@@ -78,8 +79,10 @@ const Footer = (props: {
                     autoComplete="off"
                 >
                     <span>
-                        <span className="class-cicle"/>
-                        <Input placeholder="Enter your email" />
+                        <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+                            <FontAwesomeIcon icon={faEnvelope} className=""/> 
+                            <TextField label="Enter your email" variant="standard" />
+                        </Box>
                     </span>
                     <Button variant="contained"><FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Subscribe</Button>
                 </Box>

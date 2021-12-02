@@ -3,15 +3,16 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Input from '@mui/material/Input';
 import BG_TABHOME_1 from '../assets/img/BG_TABHOME_1.png';
 import BG_TABHOME_2 from '../assets/img/BG_TABHOME_2.png';
 import BG_TABHOME_3 from '../assets/img/BG_TABHOME_3.png';
 import { Button } from '@mui/material';
+import TextField from '@mui/material/TextField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTaxi } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -94,12 +95,16 @@ const TabHome = () => {
           >
             <span className="class-line"/>
             <span>
-              <span className="class-cicle"/>
-              <Input placeholder="Where are you?" />
+              <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+                <FontAwesomeIcon icon={faLocationDot} className=""/> 
+                <TextField label="Where are you?" variant="standard" />
+              </Box>
             </span>
             <span>
-              <span className="class-cicle"/>
-              <Input placeholder="Where do you want to go?" />
+              <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+                <FontAwesomeIcon icon={faLocationDot} className=""/> 
+                <TextField label="Where do you want to go?" variant="standard" />
+              </Box>
             </span>
             <Button variant="contained" className="class-button-black">
               <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Take a Trip Now!
