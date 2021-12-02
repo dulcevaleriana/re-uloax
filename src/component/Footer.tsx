@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import Box from "@mui/material/Box";
 import Input from "@mui/material/Input";
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
 import Icon_fb from '../assets/img/icon/facebook-brands.svg';
 import Icon_twitter from '../assets/img/icon/twitter-brands.svg';
 import Icon_instagram from '../assets/img/icon/instagram-brands.svg';
@@ -81,9 +81,7 @@ const Footer = (props: {
                         <span className="class-cicle"/>
                         <Input placeholder="Enter your email" />
                     </span>
-                    <Button variant="contained">
-                        <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Subscribe
-                    </Button>
+                    <Button variant="contained"><FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Subscribe</Button>
                 </Box>
             </div>
         </div>
