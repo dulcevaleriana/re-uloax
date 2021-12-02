@@ -1,3 +1,27 @@
+#RE-ULOAX:
+
+Es un repositorio para implementar los lineamientos WCAG 2.0 que tratan sobre accesibilidad web para discapacitados, los lineamientos a seguir estan en www.w#.org, especificamente en estos enlaces: 
+
+- https://www.w3.org/WAI/test-evaluate/preliminary/#video
+- https://w3.org/WAI/WCAG21/quickref?currentsidebar=%23col_customize&levels=aa%2Caaa&versions=2.0
+- https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0&levels=a%2Caaa
+- https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0&levels=a%2Caa
+- https://www.w3.org/WAI/ER/tools/?q=wcag-20-w3c-web-content-accessibility-guidelines-20	
+
+Puede clonar el repositoriopara ver el avances y resultado de esta implementación (Información mas abajo)
+Si logra clonarlo bien, estas son las vista finales que apareceran en pantalla:
+
+![image](https://user-images.githubusercontent.com/39066351/144435553-2405501d-5d3d-4a6f-a042-d1228d738c41.png)
+
+![image](https://user-images.githubusercontent.com/39066351/144435688-fbf6dad3-f3c6-4a07-9da6-61e593784905.png)
+
+![image](https://user-images.githubusercontent.com/39066351/144435767-71c99f4f-0288-41ba-9f0e-327da50b6513.png)
+
+![image](https://user-images.githubusercontent.com/39066351/144435827-136f3990-57e6-412a-bf9e-319f51830cf7.png)
+
+![image](https://user-images.githubusercontent.com/39066351/144435875-87aa2ed5-fecc-4f3b-b7b4-79500a5f40fd.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
