@@ -1,4 +1,5 @@
 #RE-ULOAX:
+NOTA IMPORTANTE: Este es un rediseño de una plantilla gratuita libre de uso comercial llamada Uloax.com, este proyecto a sido creado con fines educativos y de capacitación laboral. link de la plantilla: https://plantillashtmlgratis.com/en/todas-las-plantillas/plantilla/download-html-css-templates-for-free-uloax/
 
 Es un repositorio para implementar los lineamientos WCAG 2.0 que tratan sobre accesibilidad web para discapacitados, los lineamientos a seguir estan en www.w#.org, especificamente en estos enlaces: 
 
@@ -20,7 +21,6 @@ Si logra clonarlo bien, estas son las vista finales que apareceran en pantalla:
 ![image](https://user-images.githubusercontent.com/39066351/144435827-136f3990-57e6-412a-bf9e-319f51830cf7.png)
 
 ![image](https://user-images.githubusercontent.com/39066351/144435875-87aa2ed5-fecc-4f3b-b7b4-79500a5f40fd.png)
-
 
 # Getting Started with Create React App
 
