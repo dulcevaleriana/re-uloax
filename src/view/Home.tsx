@@ -73,8 +73,8 @@ const Home = () => {
     return(
         <div className="class-Home">
             <TabHome />
-            <div>
-                <h1>Our <strong>Taxi Drivers</strong></h1>
+            <div id="ourTaxiDrivers">
+                <h2>Our <strong>Taxi Drivers</strong></h2>
                 {CardDriverArray.map((item,key)=>(
                     <CardDriver 
                         key={key}
@@ -85,8 +85,8 @@ const Home = () => {
                     />
                 ))}
             </div>
-            <div>
-                <h1>Why Ride <strong>With Uloax</strong></h1>
+            <div id="rideWithUs">
+                <h2>Why Ride <strong>With Uloax</strong></h2>
                 {CardInfoArray.map((item,key)=>(
                     <CardInfo 
                         key={key}
@@ -99,7 +99,9 @@ const Home = () => {
                     />
                 ))}
             </div>
-            <AppDownloadInfo />
+            <span id="app">
+                <AppDownloadInfo />
+            </span>
         </div>
     )
 }

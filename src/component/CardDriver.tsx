@@ -13,11 +13,11 @@ const CardDriver = (props: {
             <div>
                 <img src={props.img} alt="IMG" />
             </div>
-            <h4>
+            <h3>
                 Drive{props.position}:
                 <br/>
                 {props.name}
-            </h4>
+            </h3>
             <p>
                 {props.info}
             </p>

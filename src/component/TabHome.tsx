@@ -1,17 +1,18 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Input from '@mui/material/Input';
 import BG_TABHOME_1 from '../assets/img/BG_TABHOME_1.png';
 import BG_TABHOME_2 from '../assets/img/BG_TABHOME_2.png';
 import BG_TABHOME_3 from '../assets/img/BG_TABHOME_3.png';
 import { Button } from '@mui/material';
+import TextField from '@mui/material/TextField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTaxi } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -48,11 +49,20 @@ interface TabPanelProps {
   }
 
 const TabHome = () => {
-    const [value, setValue] = React.useState(0);
-
+    const [value, setValue] = useState(0);
+    const [whereAreYou, setWhereAreYou] = useState("");
+    const [whereDoYouWantToGo, setWhereDoYouWantToGo] = useState("");
+    const [validForm, setValidForm] = useState(false);
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
       setValue(newValue);
     };
+
+    const validFormChange = () =>{
+      alert("Get it!, you'are in " + whereAreYou + " and, you wanna go to " + whereDoYouWantToGo + " in 5 minutes one of us Taxi Driver will coming for you, wait for us :)");
+      setValidForm(false);
+      setWhereDoYouWantToGo(" ");
+      setWhereAreYou(" ");
+    }
   
     return (
       <Box sx={{ width: '100%' }}>
@@ -94,14 +104,43 @@ const TabHome = () => {
           >
             <span className="class-line"/>
             <span>
-              <span className="class-cicle"/>
-              <Input placeholder="Where are you?" />
+              <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+                <FontAwesomeIcon icon={faLocationDot} className=""/> 
+                <TextField 
+                  error={(validForm && whereAreYou === "") ? true : false}
+                  onChange={(a)=>setWhereAreYou(a.target.value)} 
+                  value={whereAreYou !== "" ? whereAreYou : ""}
+                  label="Where are you?" 
+                  variant="standard" 
+                  id="Where-are-you"
+                  helperText={(validForm && whereAreYou === "") ? "You have to tell us where you are" : false}
+                />
+              </Box>
             </span>
             <span>
-              <span className="class-cicle"/>
-              <Input placeholder="Where do you want to go?" />
+              <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+                <FontAwesomeIcon icon={faLocationDot} className=""/> 
+                <TextField 
+                  error={(validForm && whereDoYouWantToGo === "") ? true : false}
+                  onChange={(b)=>setWhereDoYouWantToGo(b.target.value)}
+                  value={whereDoYouWantToGo !== "" ? whereDoYouWantToGo : ""}
+                  label="Where do you want to go?" 
+                  variant="standard" 
+                  id="Where-do-you-want-to-go"
+                  helperText={(validForm && whereDoYouWantToGo === "") ? "You have to tell us where you want to go" : false}
+                />
+              </Box>
             </span>
-            <Button variant="contained" className="class-button-black">
+            <Button 
+              onClick={
+                (validForm && whereDoYouWantToGo !== "" && whereAreYou !== "") ? 
+                (validFormChange) 
+                : 
+                (()=>setValidForm(true))
+              } 
+              variant="contained" 
+              className="class-button-black"
+            >
               <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Take a Trip Now!
             </Button>
           </Box>
