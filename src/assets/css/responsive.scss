@@ -186,6 +186,15 @@
 
 /*Smartphone*/
 @media only screen and (max-width: 600px){
+    .MuiBox-root.css-8atqhb form.MuiBox-root.css-1b0ve20 span.class-line {
+        left: 73px;
+    }
+    .MuiBox-root.css-8atqhb form.MuiBox-root.css-1b0ve20 > span:nth-child(2), 
+    .MuiBox-root.css-8atqhb form.MuiBox-root.css-1b0ve20 > span:nth-child(3) {
+        position: relative;
+        justify-content: center;
+        display: flex;
+    }
     .MuiBox-root.css-8atqhb {
         grid-template-columns: auto;
         display: grid;
@@ -235,6 +244,12 @@
 }
 
 @media only screen and (max-width: 416px) {
+    .MuiBox-root.css-8atqhb form.MuiBox-root.css-1b0ve20 span.class-line {
+        left: 19px;
+    }
+    .MuiBox-root.css-1nylpq2 {
+        width: 100%;
+    }
     .class-AppDownloadInfo h2,
     .class-Home > div:nth-child(3) h2,
     .class-Home > div:nth-child(2) h2 {

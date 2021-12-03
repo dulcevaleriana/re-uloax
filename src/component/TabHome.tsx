@@ -58,7 +58,7 @@ const TabHome = () => {
     };
 
     const validFormChange = () =>{
-      alert("Get it!, you'are in " + whereAreYou + " and, you wanna go to " + whereDoYouWantToGo + " in 5 minutes one of us Taxi Driver will comming for you, wait for us :)");
+      alert("Get it!, you'are in " + whereAreYou + " and, you wanna go to " + whereDoYouWantToGo + " in 5 minutes one of us Taxi Driver will coming for you, wait for us :)");
       setValidForm(false);
       setWhereDoYouWantToGo(" ");
       setWhereAreYou(" ");
