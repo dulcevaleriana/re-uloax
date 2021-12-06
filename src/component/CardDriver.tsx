@@ -4,14 +4,16 @@ const CardDriver = (props: {
     img:string,
     position:number,
     name:string,
-    info:string
+    info:string,
+    rol:string,
+    arialLabel:string
 }) => {
 
     return(
         <div className="class-CardDriver">
             <span>{props.position}</span>
             <div>
-                <img src={props.img} alt="IMG" />
+                <img src={props.img} alt="IMG" role={props.rol} aria-label={props.arialLabel}/>
             </div>
             <h3>
                 Drive{props.position}:

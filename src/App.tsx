@@ -24,15 +24,13 @@ function App() {
         <Route path="/SignIp" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
       </Routes>
-      <span id="contactUs">
-        <Footer 
-          function0={() => setCountView(0)}
-          function1={() => setCountView(1)}
-          function2={() => setCountView(2)}
-          function3={() => setCountView(3)}
-          function4={() => setCountView(4)}
-        />
-      </span>
+      <Footer 
+        function0={() => setCountView(0)}
+        function1={() => setCountView(1)}
+        function2={() => setCountView(2)}
+        function3={() => setCountView(3)}
+        function4={() => setCountView(4)}
+      />
     </div>
   );
 }

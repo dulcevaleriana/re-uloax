@@ -8,14 +8,20 @@ const CardInfo = (props:{
     info:string,
     icon:any,
     buttonName:string,
-    flip:boolean
+    flip:boolean,
+    rolIMG:string,
+    arialLabelIMG:string,
+    rolBUTTON:string,
+    arialLabelBUTTON:string
 }) => {
     return(
         <div className={props.flip === true ? "class-CardInfo class-flip" : "class-CardInfo"}>
-            <img src={props.img} alt="IMG" />
+            <img src={props.img} alt="IMG" role={props.rolIMG} aria-label={props.arialLabelIMG}/>
             <h3>{props.title}</h3>
             <p>{props.info}</p>
-            <Button variant="contained"><FontAwesomeIcon icon={props.icon} /> {props.buttonName}</Button>
+            <Button variant="contained" role={props.rolBUTTON} aria-label={props.arialLabelBUTTON}>
+                <FontAwesomeIcon icon={props.icon} /> {props.buttonName}
+            </Button>
         </div>
     )
 }

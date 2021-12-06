@@ -53,6 +53,51 @@ const TabHome = () => {
     const [whereAreYou, setWhereAreYou] = useState("");
     const [whereDoYouWantToGo, setWhereDoYouWantToGo] = useState("");
     const [validForm, setValidForm] = useState(false);
+
+    
+    const rolArray = [
+      {
+          rol: "tab make client engagement",
+          arialLabel: "primary"
+      },
+      {
+          rol: "tab drive with us",
+          arialLabel: "secondary"
+      },
+      {
+          rol: "tab take a trip",
+          arialLabel: "secondary"
+      },
+      {
+          rol: "tab call classics service",
+          arialLabel: "secondary"
+      },
+      {
+          rol: "button become a uloaxdriver",
+          arialLabel: "primary button become a uloaxdriver"
+      },
+      {
+          rol: "form make a trip with uloax",
+          arialLabel: "primary"
+      },
+      {
+          rol: "input Where are you",
+          arialLabel: "secondary"
+      },
+      {
+          rol: "input Where do you want to go",
+          arialLabel: "secondary"
+      },
+      {
+          rol: "button Take a Trip Now",
+          arialLabel: "secondary"
+      },
+      {
+          rol: "button Call Classics Service",
+          arialLabel: "primary"
+      }
+    ]
+
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
       setValue(newValue);
     };
@@ -67,10 +112,10 @@ const TabHome = () => {
     return (
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab label="Drive with us" {...a11yProps(0)} />
-            <Tab label="Take a Trip" {...a11yProps(1)} />
-            <Tab label="Call Classics Service" {...a11yProps(2)} />
+          <Tabs value={value} onChange={handleChange} role={rolArray[0].rol} aria-label={rolArray[0].arialLabel}>
+            <Tab label="Drive with us" {...a11yProps(0)} role={rolArray[1].rol} aria-label={rolArray[1].arialLabel}/>
+            <Tab label="Take a Trip" {...a11yProps(1)} role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}/>
+            <Tab label="Call Classics Service" {...a11yProps(2)} role={rolArray[3].rol} aria-label={rolArray[3].arialLabel}/>
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -81,7 +126,7 @@ const TabHome = () => {
           <p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c
           </p>
-          <Button variant="contained" className="class-button-black">
+          <Button variant="contained" className="class-button-black" role={rolArray[4].rol} aria-label={rolArray[4].arialLabel}>
               <FontAwesomeIcon icon={faTaxi} /> Become a UloaxDriver
           </Button>
           <img src={BG_TABHOME_1} alt="IMG" />
@@ -101,6 +146,8 @@ const TabHome = () => {
             }}
             noValidate
             autoComplete="off"
+            role={rolArray[5].rol} 
+            aria-label={rolArray[5].arialLabel}
           >
             <span className="class-line"/>
             <span>
@@ -113,6 +160,8 @@ const TabHome = () => {
                   label="Where are you?" 
                   variant="standard" 
                   id="Where-are-you"
+                  role={rolArray[6].rol} 
+                  aria-label={rolArray[6].arialLabel}
                   helperText={(validForm && whereAreYou === "") ? "You have to tell us where you are" : false}
                 />
               </Box>
@@ -127,6 +176,8 @@ const TabHome = () => {
                   label="Where do you want to go?" 
                   variant="standard" 
                   id="Where-do-you-want-to-go"
+                  role={rolArray[7].rol} 
+                  aria-label={rolArray[7].arialLabel}
                   helperText={(validForm && whereDoYouWantToGo === "") ? "You have to tell us where you want to go" : false}
                 />
               </Box>
@@ -140,6 +191,8 @@ const TabHome = () => {
               } 
               variant="contained" 
               className="class-button-black"
+              role={rolArray[8].rol} 
+              aria-label={rolArray[8].arialLabel}
             >
               <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Take a Trip Now!
             </Button>
@@ -157,7 +210,7 @@ const TabHome = () => {
           <strong>
             (+71) 1234567890
           </strong>
-          <Button variant="contained" className="class-button-black">
+          <Button variant="contained" className="class-button-black" role={rolArray[9].rol} aria-label={rolArray[9].arialLabel}>
               <FontAwesomeIcon icon={faPhone} /> Call Classics Service
           </Button>
           <img src={BG_TABHOME_3} alt="IMG" />
