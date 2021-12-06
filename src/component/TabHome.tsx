@@ -112,7 +112,7 @@ const TabHome = () => {
     return (
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs value={value} onChange={handleChange} role={rolArray[0].rol} aria-label={rolArray[0].arialLabel}>
+          <Tabs value={value} onChange={handleChange} role={rolArray[0].rol} aria-labelledby={rolArray[0].arialLabel}>
             <Tab label="Drive with us" {...a11yProps(0)} role={rolArray[1].rol} aria-label={rolArray[1].arialLabel}/>
             <Tab label="Take a Trip" {...a11yProps(1)} role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}/>
             <Tab label="Call Classics Service" {...a11yProps(2)} role={rolArray[3].rol} aria-label={rolArray[3].arialLabel}/>
@@ -147,7 +147,7 @@ const TabHome = () => {
             noValidate
             autoComplete="off"
             role={rolArray[5].rol} 
-            aria-label={rolArray[5].arialLabel}
+            aria-labelledby={rolArray[5].arialLabel}
           >
             <span className="class-line"/>
             <span>

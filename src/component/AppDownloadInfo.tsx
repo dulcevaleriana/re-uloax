@@ -21,7 +21,7 @@ const AppDownloadInfo = () => {
     ]
 
     return(
-        <div className="class-AppDownloadInfo">
+        <div className="class-AppDownloadInfo" role={rolArray[1].rol} aria-labelledby={rolArray[1].arialLabel}>
             <h2>
                 Downloads <br/>
                 <strong>Our App Today</strong>

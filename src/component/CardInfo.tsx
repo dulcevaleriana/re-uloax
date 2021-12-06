@@ -15,7 +15,7 @@ const CardInfo = (props:{
     arialLabelBUTTON:string
 }) => {
     return(
-        <div className={props.flip === true ? "class-CardInfo class-flip" : "class-CardInfo"}>
+        <div className={props.flip === true ? "class-CardInfo class-flip" : "class-CardInfo"} role={props.rolBUTTON} aria-labelledby={props.arialLabelBUTTON}>
             <img src={props.img} alt="IMG" role={props.rolIMG} aria-label={props.arialLabelIMG}/>
             <h3>{props.title}</h3>
             <p>{props.info}</p>

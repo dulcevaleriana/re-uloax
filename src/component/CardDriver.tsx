@@ -10,7 +10,7 @@ const CardDriver = (props: {
 }) => {
 
     return(
-        <div className="class-CardDriver">
+        <div className="class-CardDriver" role={props.rol} aria-labelledby={props.arialLabel}>
             <span>{props.position}</span>
             <div>
                 <img src={props.img} alt="IMG" role={props.rol} aria-label={props.arialLabel}/>

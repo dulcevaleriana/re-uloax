@@ -82,6 +82,10 @@ const Footer = (props: {
         {
             rol: "Button Subscribe Uloax Newsletter",
             arialLabel: "Secondary"
+        },
+        {
+            rol: "social media navigator",
+            arialLabel: "secondary social media menu"
         }
     ]
 
@@ -100,7 +104,7 @@ const Footer = (props: {
                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as It is a long established fact that a reader will be distracted by the readable c
                 </p>
             </div>
-            <nav role={rolArray[1].rol} aria-label={rolArray[1].arialLabel}>
+            <nav role={rolArray[1].rol} aria-labelledby={rolArray[1].arialLabel}>
                 <h2>Links</h2>
                 <ul>
                 <li onClick={() => props.function0()}>
@@ -120,7 +124,7 @@ const Footer = (props: {
                 </li>
             </ul>
             </nav>
-            <div>
+            <nav role={rolArray[15].rol} aria-labelledby={rolArray[15].arialLabel}>
                 <h2>Follow Us</h2>
                 <ul>
                     <li>
@@ -149,7 +153,7 @@ const Footer = (props: {
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
             <div>
                 <h2>Newsletter</h2>
                 <Box
@@ -160,7 +164,7 @@ const Footer = (props: {
                     noValidate
                     autoComplete="off"
                     role={rolArray[12].rol} 
-                    aria-label={rolArray[12].arialLabel}
+                    aria-labelledby={rolArray[12].arialLabel}
                 >
                     <span>
                         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>

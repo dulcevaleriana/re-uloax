@@ -59,7 +59,17 @@ const Menu = (props: {
         {
             rol: "SignUp link",
             arialLabel: "click or enter to go to SignUp"
+        },
+        {
+            rol: "close menu",
+            arialLabel: "close responsive menu"
+        },
+        {
+            rol: "open menu",
+            arialLabel: "open responsive menu"
         }
+
+
 
     ]
 
@@ -77,19 +87,19 @@ const Menu = (props: {
                     }
                 </title>
             </Helmet>
-            <Link to="/" onClick={() => setActiveMenu(false)} role={rolArray[0].rol} aria-label={rolArray[0].arialLabel}>
+            <Link to="/" onClick={() => setActiveMenu(false)} role={rolArray[0].rol} aria-labelledby={rolArray[0].arialLabel}>
                 <img src={IMG_LOGO} role={rolArray[1].rol} aria-label={rolArray[1].arialLabel} alt="IMG_LOGO" />
             </Link>
             {responsiveMenuWidth992px && (
                 <>
                     {activeMenu === true ? (
-                        <FontAwesomeIcon icon={faXmark} onClick={() => setActiveMenu(false)} role="close menu" aria-label="close responsive menu"/>
+                        <FontAwesomeIcon icon={faXmark} onClick={() => setActiveMenu(false)} role={rolArray[9].rol} aria-label={rolArray[9].arialLabel}/>
                     ) : (
-                        <FontAwesomeIcon icon={faBars} onClick={() => setActiveMenu(true)} role="open menu" aria-label="open responsive menu"/>
+                        <FontAwesomeIcon icon={faBars} onClick={() => setActiveMenu(true)} role={rolArray[9].rol} aria-label={rolArray[9].arialLabel}/>
                     )}
                 </>
             )}
-            <nav role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}>
+            <nav role={rolArray[2].rol} aria-labelledby={rolArray[2].arialLabel}>
                 <ul className={activeMenu === true ? "class-menu-smartphone" : " "}>
                     <li onClick={() => setActiveMenu(false)}>
                         <a href="#Home" role={rolArray[3].rol} aria-label={rolArray[3].arialLabel} >Home</a>
@@ -109,7 +119,7 @@ const Menu = (props: {
                 </ul>
             </nav>
             {activeMenu && (<div className="class-bg-menu-smartphone" onClick={() => setActiveMenu(false)}/>)}
-            <div>
+            <div role={rolArray[8].rol + " " + rolArray[9].rol} aria-labelledby={rolArray[8].arialLabel + " " + rolArray[9].arialLabel}>
                 <Link to="/SignIp" role={rolArray[8].rol} aria-label={rolArray[8].arialLabel}>
                     <Button variant="contained" role={rolArray[8].rol} aria-label={rolArray[8].arialLabel}>
                         <FontAwesomeIcon icon={faUser} /> {responsiveMenuWidth560px && "SignIp"}
