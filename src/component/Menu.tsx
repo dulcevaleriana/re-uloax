@@ -12,13 +12,18 @@ import IMG_LOGO from '../assets/img/logo.png';
 import {Helmet} from "react-helmet";
 
 const Menu = (props: {
-    countView: number
+    countView: number,
+    function0: () => void,
+    function1: () => void,
+    function2: () => void,
+    function3: () => void,
+    function4: () => void
 }) => {
     const [activeMenu, setActiveMenu] = useState(false);
     const responsiveMenuWidth992px = useMediaQuery("(max-width: 992px)");
     const responsiveMenuWidth560px = useMediaQuery("(min-width: 560px)");
     let countView = props.countView;
-    
+    console.log(countView)
     const rolArray = [
         {
             rol: "home link",
@@ -101,19 +106,19 @@ const Menu = (props: {
             )}
             <nav role={rolArray[2].rol} aria-labelledby={rolArray[2].arialLabel}>
                 <ul className={activeMenu === true ? "class-menu-smartphone" : " "}>
-                    <li onClick={() => setActiveMenu(false)}>
+                    <li onClick={() => {setActiveMenu(false);props.function0()}}>
                         <a href="#Home" role={rolArray[3].rol} aria-label={rolArray[3].arialLabel} >Home</a>
                     </li>
-                    <li onClick={() => setActiveMenu(false)}>
+                    <li onClick={() => {setActiveMenu(false);props.function1()}}>
                         <a href="#ourTaxiDrivers" role={rolArray[4].rol} aria-label={rolArray[4].arialLabel} >Our Drivers</a>
                     </li>
-                    <li onClick={() => setActiveMenu(false)}>
+                    <li onClick={() => {setActiveMenu(false);props.function2()}}>
                         <a href="#rideWithUs" role={rolArray[5].rol} aria-label={rolArray[5].arialLabel} >Ride With Us</a>
                     </li>
-                    <li onClick={() => setActiveMenu(false)}>
+                    <li onClick={() => {setActiveMenu(false);props.function3()}}>
                         <a href="#app" role={rolArray[6].rol} aria-label={rolArray[6].arialLabel}>App</a>
                     </li>
-                    <li onClick={() => setActiveMenu(false)}>
+                    <li onClick={() => {setActiveMenu(false);props.function4()}}>
                         <a href="#contactUs" role={rolArray[7].rol} aria-label={rolArray[7].arialLabel}>Contact Us</a>
                     </li>
                 </ul>
