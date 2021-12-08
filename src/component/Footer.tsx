@@ -24,67 +24,67 @@ const Footer = (props: {
 
     const rolArray = [
         {
-            rol: "logo Re-Uloax",
+            rol: "img",
             arialLabel: "image logo Re-Uloax"
         },
         {
-            rol: "navigator",
+            rol: "navigation",
             arialLabel: "primary principal menu"
         },
         {
-            rol: "home link",
-            arialLabel: "click or enter to go to Re-Uloax principal page"
+            rol: "link",
+            arialLabel: "Home"
         },
         {
-            rol: "Our Drivers link",
-            arialLabel: "click or enter to go to Our Drivers"
+            rol: "link",
+            arialLabel: "Our Drivers"
         },
         {
-            rol: "Ride With Us link",
-            arialLabel: "click or enter to go to Ride With Us"
+            rol: "link",
+            arialLabel: "Ride With Us"
         },
         {
-            rol: "App link",
-            arialLabel: "click or enter to go to App Uloax"
+            rol: "link",
+            arialLabel: "App"
         },
         {
-            rol: "Contact Us link",
-            arialLabel: "click or enter to go to Contact Us"
+            rol: "link",
+            arialLabel: "Contact Us"
         },
         {
-            rol: "Uloax Facebook link",
+            rol: "link",
             arialLabel: "click or enter to go to our Uloax Facebook"
         },
         {
-            rol: "Uloax Twitter link",
+            rol: "link",
             arialLabel: "click or enter to go to our Uloax Twitter"
         },
         {
-            rol: "Uloax LinkedIn link",
+            rol: "link",
             arialLabel: "click or enter to go to our Uloax LinkedIn"
         },
         {
-            rol: "Uloax Youtube link",
+            rol: "link",
             arialLabel: "click or enter to go to our Uloax Youtube"
         },
         {
-            rol: "Uloax Instagram link",
+            rol: "link",
             arialLabel: "click or enter to go to our Uloax Instagram"
         },
         {
-            rol: "Form Re-Uloax Newsletter",
+            rol: "form",
             arialLabel: "Primary"
         },
         {
-            rol: "Input enter your email",
+            rol: "textbox",
             arialLabel: "Secondary"
         },
         {
-            rol: "Button Subscribe Uloax Newsletter",
-            arialLabel: "Secondary"
+            rol: "button link",
+            arialLabel: "Subscribe"
         },
         {
-            rol: "social media navigator",
+            rol: "navigation",
             arialLabel: "secondary social media menu"
         }
     ]
@@ -108,19 +108,29 @@ const Footer = (props: {
                 <h2>Links</h2>
                 <ul>
                 <li onClick={() => props.function0()}>
-                    <a href="#Home" role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}>Home</a>
+                    <a href="#Home" role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}>
+                        {rolArray[2].arialLabel}
+                    </a>
                 </li>
                 <li onClick={() => props.function1()}>
-                    <a href="#ourTaxiDrivers" role={rolArray[3].rol} aria-label={rolArray[3].arialLabel}>Our Drivers</a>
+                    <a href="#ourTaxiDrivers" role={rolArray[3].rol} aria-label={rolArray[3].arialLabel}>
+                        {rolArray[3].arialLabel}
+                    </a>
                 </li>
                 <li onClick={() => props.function2()}>
-                    <a href="#rideWithUs" role={rolArray[4].rol} aria-label={rolArray[4].arialLabel}>Ride With Us</a>
+                    <a href="#rideWithUs" role={rolArray[4].rol} aria-label={rolArray[4].arialLabel}>
+                        {rolArray[4].arialLabel}
+                    </a>
                 </li>
                 <li onClick={() => props.function3()}>
-                    <a href="#app" role={rolArray[5].rol} aria-label={rolArray[5].arialLabel}>App</a>
+                    <a href="#app" role={rolArray[5].rol} aria-label={rolArray[5].arialLabel}>
+                        {rolArray[5].arialLabel}
+                    </a>
                 </li>
                 <li onClick={() => props.function4()}>
-                    <a href="#contactUs" role={rolArray[6].rol} aria-label={rolArray[6].arialLabel}>Contact Us</a>
+                    <a href="#contactUs" role={rolArray[6].rol} aria-label={rolArray[6].arialLabel}>
+                        {rolArray[6].arialLabel}
+                    </a>
                 </li>
             </ul>
             </nav>
@@ -129,27 +139,27 @@ const Footer = (props: {
                 <ul>
                     <li>
                         <a href="#lolo" role={rolArray[7].rol} aria-label={rolArray[7].arialLabel}>
-                            <img src={Icon_fb} alt="ICON" role={rolArray[7].rol} aria-label={rolArray[7].arialLabel}/> Facebook
+                            <img src={Icon_fb} alt={"icon about " + rolArray[7].rol} role={rolArray[7].rol} aria-label={rolArray[7].arialLabel}/> Facebook
                         </a>
                     </li>
                     <li>
                         <a href="#lolo" role={rolArray[8].rol} aria-label={rolArray[8].arialLabel}>
-                            <img src={Icon_twitter} alt="ICON" role={rolArray[8].rol} aria-label={rolArray[8].arialLabel}/> Twitter
+                            <img src={Icon_twitter} alt={"icon about " + rolArray[8].rol} role={rolArray[8].rol} aria-label={rolArray[8].arialLabel}/> Twitter
                         </a>
                     </li>
                     <li>
                         <a href="#lolo" role={rolArray[9].rol} aria-label={rolArray[9].arialLabel}>
-                            <img src={Icon_linkedin} alt="ICON" role={rolArray[9].rol} aria-label={rolArray[9].arialLabel}/> LinkedIn
+                            <img src={Icon_linkedin} alt={"icon about " + rolArray[9].rol} role={rolArray[9].rol} aria-label={rolArray[9].arialLabel}/> LinkedIn
                         </a>
                     </li>
                     <li>
                         <a href="#lolo" role={rolArray[10].rol} aria-label={rolArray[10].arialLabel}>
-                            <img src={Icon_youtube} alt="ICON" role={rolArray[10].rol} aria-label={rolArray[10].arialLabel}/> Youtube
+                            <img src={Icon_youtube} alt={"icon about " + rolArray[10].rol} role={rolArray[10].rol} aria-label={rolArray[10].arialLabel}/> Youtube
                         </a>
                     </li>
                     <li>
                         <a href="#lolo" role={rolArray[11].rol} aria-label={rolArray[11].arialLabel}>
-                            <img src={Icon_instagram} alt="ICON" role={rolArray[11].rol} aria-label={rolArray[11].arialLabel}/> Instagram
+                            <img src={Icon_instagram} alt={"icon about " + rolArray[11].rol} role={rolArray[11].rol} aria-label={rolArray[11].arialLabel}/> Instagram
                         </a>
                     </li>
                 </ul>
@@ -193,7 +203,7 @@ const Footer = (props: {
                         role={rolArray[14].rol} 
                         aria-label={rolArray[14].arialLabel}
                     >
-                            <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Subscribe
+                            <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> {rolArray[14].arialLabel}
                     </Button>
                 </Box>
             </div>

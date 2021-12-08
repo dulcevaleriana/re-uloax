@@ -10,10 +10,10 @@ const CardDriver = (props: {
 }) => {
 
     return(
-        <div className="class-CardDriver" role={props.rol} aria-labelledby={props.arialLabel}>
+        <article className="class-CardDriver" role={props.rol} aria-labelledby={props.arialLabel}>
             <span>{props.position}</span>
             <div>
-                <img src={props.img} alt="IMG" role={props.rol} aria-label={props.arialLabel}/>
+                <img src={props.img} alt={"image driver called " + props.name} role={props.rol} aria-label={props.arialLabel}/>
             </div>
             <h3>
                 Drive{props.position}:
@@ -23,7 +23,7 @@ const CardDriver = (props: {
             <p>
                 {props.info}
             </p>
-        </div>
+        </article>
     )
 }
 

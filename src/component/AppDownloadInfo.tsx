@@ -7,32 +7,32 @@ import IOS from '../assets/img/IOS.png';
 const AppDownloadInfo = () => {
     const rolArray = [
         {
-            rol: "Image Download Uloax App",
-            arialLabel: "Secondary Image Download Uloax App"
+            rol: "img",
+            arialLabel: "Downloads Our App Today"
         },
         {
-            rol: "Button / Image Download Uloax App on Google Play",
+            rol: "button link",
             arialLabel: "Primary Button / Image Download Uloax App on Google Play"
         },
         {
-            rol: "Button / Image Download Uloax App on Apple App Store",
+            rol: "button link",
             arialLabel: "Primary Button / Image Download Uloax App on Apple App Store"
         }
     ]
 
     return(
-        <div className="class-AppDownloadInfo" role={rolArray[1].rol} aria-labelledby={rolArray[1].arialLabel}>
+        <div className="class-AppDownloadInfo" role={rolArray[0].rol} aria-labelledby={rolArray[0].arialLabel}>
             <h2>
                 Downloads <br/>
                 <strong>Our App Today</strong>
             </h2>
             <Button variant="text" role={rolArray[1].rol} aria-label={rolArray[1].arialLabel}>
-                <img src={Google_Play} alt="IMG" role={rolArray[1].rol} aria-label={rolArray[1].arialLabel}/>
+                <img src={Google_Play} alt="img / buttom about download our app on Google Play" role={rolArray[1].rol} aria-label={rolArray[1].arialLabel}/>
             </Button>
             <Button variant="text" role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}>
-                <img src={IOS} alt="IMG" role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}/>
+                <img src={IOS} alt="img / buttom about download our app on Apple App Store" role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}/>
             </Button>
-            <img src={BG_App} alt="IMG" role={rolArray[0].rol} aria-label={rolArray[0].arialLabel}/>
+            <img src={BG_App} alt={rolArray[0].arialLabel} role={rolArray[0].rol} aria-label={rolArray[0].arialLabel}/>
         </div>
     )
 }

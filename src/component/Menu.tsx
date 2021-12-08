@@ -23,54 +23,54 @@ const Menu = (props: {
     const responsiveMenuWidth992px = useMediaQuery("(max-width: 992px)");
     const responsiveMenuWidth560px = useMediaQuery("(min-width: 560px)");
     let countView = props.countView;
-    console.log(countView)
+
     const rolArray = [
         {
-            rol: "home link",
+            rol: "link",
             arialLabel: "click or enter to go to Re-Uloax principal page"
         },
         {
-            rol: "logo Re-Uloax",
+            rol: "img",
             arialLabel: "image logo Re-Uloax"
         },
         {
-            rol: "navigator",
+            rol: "navigation",
             arialLabel: "primary principal menu"
         },
         {
-            rol: "home link",
-            arialLabel: "click or enter to go to Re-Uloax principal page"
+            rol: "link",
+            arialLabel: "Home"
         },
         {
-            rol: "Our Drivers link",
-            arialLabel: "click or enter to go to Our Drivers"
+            rol: "link",
+            arialLabel: "Our Drivers"
         },
         {
-            rol: "Ride With Us link",
-            arialLabel: "click or enter to go to Ride With Us"
+            rol: "link",
+            arialLabel: "Ride With Us"
         },
         {
-            rol: "App link",
-            arialLabel: "click or enter to go to App Uloax"
+            rol: "link",
+            arialLabel: "App"
         },
         {
-            rol: "Contact Us link",
-            arialLabel: "click or enter to go to Contact Us"
+            rol: "link",
+            arialLabel: "Contact Us"
         },
         {
-            rol: "SignIp link",
+            rol: "link",
             arialLabel: "click or enter to go to SignIp"
         },
         {
-            rol: "SignUp link",
+            rol: "link",
             arialLabel: "click or enter to go to SignUp"
         },
         {
-            rol: "close menu",
+            rol: "link",
             arialLabel: "close responsive menu"
         },
         {
-            rol: "open menu",
+            rol: "link",
             arialLabel: "open responsive menu"
         }
 
@@ -107,19 +107,29 @@ const Menu = (props: {
             <nav role={rolArray[2].rol} aria-labelledby={rolArray[2].arialLabel}>
                 <ul className={activeMenu === true ? "class-menu-smartphone" : " "}>
                     <li onClick={() => {setActiveMenu(false);props.function0()}}>
-                        <a href="#Home" role={rolArray[3].rol} aria-label={rolArray[3].arialLabel} >Home</a>
+                        <a href="#Home" role={rolArray[3].rol} aria-label={rolArray[3].arialLabel}>
+                            {rolArray[3].arialLabel}
+                        </a>
                     </li>
                     <li onClick={() => {setActiveMenu(false);props.function1()}}>
-                        <a href="#ourTaxiDrivers" role={rolArray[4].rol} aria-label={rolArray[4].arialLabel} >Our Drivers</a>
+                        <a href="#ourTaxiDrivers" role={rolArray[4].rol} aria-label={rolArray[4].arialLabel}>
+                            {rolArray[4].arialLabel}
+                        </a>
                     </li>
                     <li onClick={() => {setActiveMenu(false);props.function2()}}>
-                        <a href="#rideWithUs" role={rolArray[5].rol} aria-label={rolArray[5].arialLabel} >Ride With Us</a>
+                        <a href="#rideWithUs" role={rolArray[5].rol} aria-label={rolArray[5].arialLabel}>
+                            {rolArray[5].arialLabel}
+                        </a>
                     </li>
                     <li onClick={() => {setActiveMenu(false);props.function3()}}>
-                        <a href="#app" role={rolArray[6].rol} aria-label={rolArray[6].arialLabel}>App</a>
+                        <a href="#app" role={rolArray[6].rol} aria-label={rolArray[6].arialLabel}>
+                            {rolArray[6].arialLabel}
+                        </a>
                     </li>
                     <li onClick={() => {setActiveMenu(false);props.function4()}}>
-                        <a href="#contactUs" role={rolArray[7].rol} aria-label={rolArray[7].arialLabel}>Contact Us</a>
+                        <a href="#contactUs" role={rolArray[7].rol} aria-label={rolArray[7].arialLabel}>
+                            {rolArray[7].arialLabel}
+                        </a>
                     </li>
                 </ul>
             </nav>

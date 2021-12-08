@@ -19,7 +19,7 @@ const CardDriverArray = [
         position: 1,
         name:"Andrea Paredes",
         info:"act that a reader will be distracted",
-        rol:"image Andrea Paredes",
+        rol:"article",
         arialLabel:"primary"
     },
     {
@@ -27,7 +27,7 @@ const CardDriverArray = [
         position: 2,
         name:"Andres Dominguez",
         info:"act that a reader will be distracted",
-        rol:"image Andres Dominguez",
+        rol:"article",
         arialLabel:"primary"
     },
     {
@@ -35,7 +35,7 @@ const CardDriverArray = [
         position: 3,
         name:"Karla Perez",
         info:"act that a reader will be distracted",
-        rol:"image Andres Dominguez",
+        rol:"article",
         arialLabel:"primary"
     }
 ]
@@ -50,11 +50,11 @@ const CardInfoArray = [
         flip:false,
         rolSubArrya:[
             {
-                rol: "Image Uloax for Every Pocket",
+                rol: "img",
                 arialLabel: "primary image Uloax for Every Pocket"
             },
             {
-                rol: "button take a trip now",
+                rol: "button link",
                 arialLabel: "primary button take a trip now"
             }
         ]
@@ -68,11 +68,11 @@ const CardInfoArray = [
         flip:true,
         rolSubArrya:[
             {
-                rol: "Image Secure and Safer Rides",
+                rol: "img",
                 arialLabel: "primary image Secure and Safer Rides"
             },
             {
-                rol: "button take a trip now",
+                rol: "button link",
                 arialLabel: "primary button take a trip now"
             }
         ]
@@ -86,11 +86,11 @@ const CardInfoArray = [
         flip:false,
         rolSubArrya:[
             {
-                rol: "Image Uloax for Every Pocket",
+                rol: "img",
                 arialLabel: "primary image Uloax for Every Pocket"
             },
             {
-                rol: "button take a trip now",
+                rol: "button link",
                 arialLabel: "primary button take a trip now"
             }
         ]
@@ -104,11 +104,11 @@ const CardInfoArray = [
         flip:true,
         rolSubArrya:[
             {
-                rol: "Image No 1 in the industry",
+                rol: "img",
                 arialLabel: "primary image No 1 in the industry"
             },
             {
-                rol: "button take a trip now",
+                rol: "button link",
                 arialLabel: "primary button take a trip now"
             }
         ]

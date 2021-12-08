@@ -57,23 +57,23 @@ const TabHome = () => {
     
     const rolArray = [
       {
-          rol: "tab make client engagement",
+          rol: "tab",
           arialLabel: "primary"
       },
       {
-          rol: "tab drive with us",
-          arialLabel: "secondary"
+          rol: "tab",
+          arialLabel: "Drive with us"
       },
       {
-          rol: "tab take a trip",
-          arialLabel: "secondary"
+          rol: "tab",
+          arialLabel: "Take a Trip"
       },
       {
-          rol: "tab call classics service",
-          arialLabel: "secondary"
+          rol: "tab",
+          arialLabel: "Call Classics Service"
       },
       {
-          rol: "button become a uloaxdriver",
+          rol: "button link",
           arialLabel: "primary button become a uloaxdriver"
       },
       {
@@ -113,9 +113,9 @@ const TabHome = () => {
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} role={rolArray[0].rol} aria-labelledby={rolArray[0].arialLabel}>
-            <Tab label="Drive with us" {...a11yProps(0)} role={rolArray[1].rol} aria-label={rolArray[1].arialLabel}/>
-            <Tab label="Take a Trip" {...a11yProps(1)} role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}/>
-            <Tab label="Call Classics Service" {...a11yProps(2)} role={rolArray[3].rol} aria-label={rolArray[3].arialLabel}/>
+            <Tab label={rolArray[1].arialLabel} {...a11yProps(0)} role={rolArray[1].rol} aria-label={rolArray[1].arialLabel}/>
+            <Tab label={rolArray[2].arialLabel} {...a11yProps(1)} role={rolArray[2].rol} aria-label={rolArray[2].arialLabel}/>
+            <Tab label={rolArray[3].arialLabel} {...a11yProps(2)} role={rolArray[3].rol} aria-label={rolArray[3].arialLabel}/>
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -129,7 +129,7 @@ const TabHome = () => {
           <Button variant="contained" className="class-button-black" role={rolArray[4].rol} aria-label={rolArray[4].arialLabel}>
               <FontAwesomeIcon icon={faTaxi} /> Become a UloaxDriver
           </Button>
-          <img src={BG_TABHOME_1} alt="IMG" />
+          <img src={BG_TABHOME_1} alt={"image called " + BG_TABHOME_1} />
         </TabPanel>
         <TabPanel value={value} index={1}>
           <h1>
@@ -197,7 +197,7 @@ const TabHome = () => {
               <FontAwesomeIcon icon={faThumbsUp} className="class-icono-rotate-and-flip"/> Take a Trip Now!
             </Button>
           </Box>
-          <img src={BG_TABHOME_2} alt="IMG" />
+          <img src={BG_TABHOME_2}  alt={"image called " + BG_TABHOME_2} />
         </TabPanel>
         <TabPanel value={value} index={2}>
           <h1>
@@ -213,7 +213,7 @@ const TabHome = () => {
           <Button variant="contained" className="class-button-black" role={rolArray[9].rol} aria-label={rolArray[9].arialLabel}>
               <FontAwesomeIcon icon={faPhone} /> Call Classics Service
           </Button>
-          <img src={BG_TABHOME_3} alt="IMG" />
+          <img src={BG_TABHOME_3}  alt={"image called " + BG_TABHOME_3} />
         </TabPanel>
       </Box>
     );
