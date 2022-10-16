@@ -1,4 +1,20 @@
 #RE-ULOAX:
+IMPORTANT NOTE: This is a redesign of a free template for commercial use called Uloax.com, this project has been created for educational and job training purposes. template link: https://templateshtmlgratis.com/all-the-templates/template/download-html-css-templates-for-free-uloax/
+
+It is a repository to implement the WCAG 2.0 guidelines that deal with web accessibility for the disabled, the guidelines to follow are at www.w#.org, specifically at these links:
+
+- https://www.w3.org/WAI/test-evaluate/preliminary/#video
+- https://w3.org/WAI/WCAG21/quickref?currentsidebar=%23col_customize&levels=aa%2Caaa&versions=2.0
+- https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0&levels=a%2Caaa
+- https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0&levels=a%2Caa
+- https://www.w3.org/WAI/ER/tools/?q=wcag-20-w3c-web-content-accessibility-guidelines-20
+
+You can clone the repository to see the progress and results of this implementation (Information below)
+If you manage to clone it well, these are the final views that will appear on the screen:
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#RE-ULOAX:
 NOTA IMPORTANTE: Este es un rediseño de una plantilla gratuita libre de uso comercial llamada Uloax.com, este proyecto a sido creado con fines educativos y de capacitación laboral. link de la plantilla: https://plantillashtmlgratis.com/en/todas-las-plantillas/plantilla/download-html-css-templates-for-free-uloax/
 
 Es un repositorio para implementar los lineamientos WCAG 2.0 que tratan sobre accesibilidad web para discapacitados, los lineamientos a seguir estan en www.w#.org, especificamente en estos enlaces: 
