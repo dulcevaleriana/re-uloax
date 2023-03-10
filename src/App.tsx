@@ -13,11 +13,11 @@ function App() {
     <div className="App" id="Home">
       <Menu 
           countView={countView}
-          function0={() => setCountView(0)}
-          function1={() => setCountView(1)}
-          function2={() => setCountView(2)}
-          function3={() => setCountView(3)}
-          function4={() => setCountView(4)}
+          // function0={() => setCountView(0)}
+          // function1={() => setCountView(1)}
+          // function2={() => setCountView(2)}
+          // function3={() => setCountView(3)}
+          // function4={() => setCountView(4)}
       />
       <Routes>
         <Route path="/" element={<Home />} />
